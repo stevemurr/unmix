@@ -1,25 +1,18 @@
 # Unmix
 
-A Python-based audio separation tool that uses AI models to separate stereo mixes into individual stems (vocals, drums, bass, other) and further separate drum tracks into individual components (kick, snare, hi-hat, toms).
+**Turn any song into stems. Separate vocals, drums, bass, and instruments with AI.**
+
+Extract individual tracks from stereo mixes using Meta's state-of-the-art Demucs model. Go further with drum separation—split your drum track into kick, snare, hi-hats, and toms.
 
 ## Features
 
-- **Stem Separation**: Separate any stereo mix into 4 stems using Facebook's Demucs model
-  - Drums
-  - Vocals
-  - Bass
-  - Other (instruments)
-  
-- **Drum Component Separation**: Further separate drum stems into individual components
-  - Kick drum
-  - Snare
-  - Hi-hats/Cymbals
-  - Toms
+- 🎵 **Stem Separation**: Separate any stereo mix into 4 stems using Facebook's Demucs model (bass, drums, other, vocals)
+- 🔧 **Drum Component Separation**: Further separate drum stems into individual components (kick, snare, toms, hats)
+- ⚡ **Hardware Acceleration**: Automatic detection and use of mps, cuda or cpu
 
-- **Hardware Acceleration**: Automatic detection and use of:
-  - MPS (Metal Performance Shaders) on Apple Silicon (M1/M2/M3)
-  - CUDA on NVIDIA GPUs
-  - CPU fallback for compatibility
+## Future Improvements
+
+- [ ] Use a fine tuned model for drum separation
 
 ## Requirements
 
@@ -32,11 +25,11 @@ A Python-based audio separation tool that uses AI models to separate stereo mixe
 
 ```bash
 # Clone the repository
-git clone <repository-url>
+git clone https://github.com/stevemurr/unmix.git
 cd unmix
 
 # Build environment and install dependencies
-make env-build
+make env
 
 # Activate the virtual environment
 source .venv/bin/activate
